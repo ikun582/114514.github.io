@@ -8,5 +8,5 @@ function burnIncense() {
         goldText.id = "goldText";
         goldText.innerText = "金榜题名";
         document.body.appendChild(goldText); // 将金榜题名文字添加到页面中
-    }, 2000);
+    }, 11000);
 }
