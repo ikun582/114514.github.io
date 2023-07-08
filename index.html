@@ -76,16 +76,26 @@
             animation: burn 0s steps(3) infinite; /* 动画效果 */
             display: none; /* 初始隐藏 */
         }
-    </style>
-    <script>
-        function burnIncense() {
-            var incense = document.getElementById("incense");
-            incense.style.display = "block"; // 显示动画
-            setTimeout(function() {
-                incense.style.display = "none"; // 2秒后隐藏动画
-            }, 7000);
-        }
-     
+        
+ <style>
+   /* CSS样式代码 */
+   @keyframes burn {
+       0% { opacity: 0; }
+       50% { opacity: 1; }
+       100% { opacity: 0; }
+       animation-duration: 8.75s; /* 将持续时间增加到原来的1.25倍 */
+   }
+</style>
+<script>
+   function burnIncense() {
+       var incense = document.getElementById("incense");
+       incense.style.animationName = "burn";
+       incense.style.animationFillMode = "forwards";
+       incense.style.animationTimingFunction = "linear";
+       incense.style.display = "block";
+   }
+</script>
+
 
 function burnIncense() {
     var incense = document.getElementById("incense");
